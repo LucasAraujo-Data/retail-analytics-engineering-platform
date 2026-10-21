@@ -29,7 +29,7 @@ def money(value):
     return Decimal(str(value)).quantize(Decimal('0.01'))
 
 def connection():
-    return psycopg.connect(host='127.0.0.1', port=int(os.getenv('POSTGRES_PORT','5433')),
+    return psycopg.connect(host=os.getenv('POSTGRES_HOST', '127.0.0.1'), port=int(os.getenv('POSTGRES_PORT','5433')),
         dbname=os.getenv('POSTGRES_DB','retail_analytics'),
         user=os.getenv('POSTGRES_USER','retail_admin'),
         password=os.environ['POSTGRES_PASSWORD'], connect_timeout=10)

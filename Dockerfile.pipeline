@@ -1,0 +1,9 @@
+FROM python:3.12-slim
+WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
+COPY requirements.txt requirements-dbt.txt ./
+RUN pip install --no-cache-dir -r requirements.txt -r requirements-dbt.txt
+COPY scripts/load_retail_data.py scripts/load_retail_data.py
+COPY scripts/container_pipeline.py scripts/container_pipeline.py
+COPY dbt/ dbt/
+CMD ["python", "scripts/container_pipeline.py"]

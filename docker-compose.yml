@@ -19,5 +19,23 @@ services:
       timeout: 3s
       retries: 15
       start_period: 10s
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile.pipeline
+    profiles: ["pipeline"]
+    environment:
+      POSTGRES_HOST: postgres
+      DBT_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: ${POSTGRES_DB:-retail_analytics}
+      POSTGRES_USER: ${POSTGRES_USER:-retail_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      PIPELINE_ORDERS: ${PIPELINE_ORDERS:-15000}
+      PIPELINE_SEED: ${PIPELINE_SEED:-42}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
 volumes:
   retail_pgdata:
