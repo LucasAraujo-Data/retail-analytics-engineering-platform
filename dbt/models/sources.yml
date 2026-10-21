@@ -1,0 +1,14 @@
+version: 2
+sources:
+  - name: retail_raw
+    schema: raw
+    tables:
+      - name: customers
+      - name: categories
+      - name: products
+      - name: stores
+      - name: channels
+      - name: orders
+      - name: order_items
+      - name: payments
+      - name: returns
