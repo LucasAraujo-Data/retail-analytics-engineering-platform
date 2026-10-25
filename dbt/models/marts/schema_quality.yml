@@ -1,0 +1,26 @@
+
+version: 2
+
+models:
+  - name: mart_customer_cohorts
+    description: Monthly customer retention by first purchase cohort.
+    columns:
+      - name: cohort_month
+        data_tests:
+          - not_null
+
+      - name: months_since_first_purchase
+        data_tests:
+          - not_null
+
+      - name: cohort_size
+        data_tests:
+          - not_null
+
+      - name: retained_customers
+        data_tests:
+          - not_null
+
+      - name: retention_rate_pct
+        data_tests:
+          - not_null
