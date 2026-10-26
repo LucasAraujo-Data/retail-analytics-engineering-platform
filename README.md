@@ -168,7 +168,6 @@ Key metrics include:
 
 Visualizations include sales versus returns over time, returns by category, and gross margin by category.
 
-
 ### Dashboard Screenshots
 
 **Executive Overview**
@@ -187,7 +186,6 @@ Visualizations include sales versus returns over time, returns by category, and 
 
 ![Returns and Profitability Dashboard](docs/images/returns_profitability.png)
 
-
 ### Power BI Report File
 
 The complete interactive Power BI report is available here:
@@ -202,6 +200,21 @@ The report contains four analytical pages:
 
 To refresh the report locally, run the PostgreSQL and dbt pipeline and configure the Power BI data source connection.
 
+### Live Power BI Dashboard
+
+Explore the interactive dashboard directly in your browser:
+
+**[View Interactive Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMjk2MTRlNGUtNzYzNy00ZmQwLWI4NzktZTc3ZTMxNzE3OTQ2IiwidCI6ImJiZTBmNmVjLTZjNGQtNGMxMi05YjdkLWUyYTEzNWE2Yjk5NSJ9)**
+
+The dashboard includes four pages:
+- Executive Overview
+- Sales Performance
+- Customer Analytics
+- Returns & Profitability
+
+You can also download the original Power BI Desktop report:
+
+[Download Power BI Report (.pbix)](powerbi/retail_analytics_dashboard.pbix)
 
 
 ## Financial Metrics and Business Rules
