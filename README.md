@@ -388,8 +388,6 @@ Power BI Desktop can then connect to the PostgreSQL analytical models to build o
 
 Core data pipeline, analytical models, dbt testing, and four Power BI dashboard pages have been developed and validated locally.
 
-Portfolio documentation and dashboard screenshots are being finalized.
-
 ## License
 
 See [LICENSE](LICENSE).
